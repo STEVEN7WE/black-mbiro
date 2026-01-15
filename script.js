@@ -353,3 +353,10 @@ function playSound(type) {
   sounds[type].currentTime = 0;
   sounds[type].play().catch(() => {});
 }
+
+window.addEventListener("blur", () => {
+  document.title = "SYSTEM PAUSED | Black Mbiro";
+});
+window.addEventListener("focus", () => {
+  document.title = "Black Mbiro";
+});
